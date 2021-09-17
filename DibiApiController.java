@@ -349,8 +349,13 @@ public class DibiApiController implements DibiApi {
 				
 				 if (answerlist.size()==0) {
 					final FormAnswer answer1 = new FormAnswer();
-					answer1.setAnswerText("Professore non trovato, riprovare");
+					final FormAnswer answer2 = new FormAnswer();
+					answer1.setAnswerText("Professore non trovato, riprovare.");
+					answer2.setAnswerText("Se la ricerca non produce risultati ti consiglio di visionare la sezione \"Docenti\" presente sul sito del Dipartimento.");
+					answer2.media("https://www.uniba.it/ricerca/dipartimenti/informatica/dipartimento/personale/docenti-2");
+					answer2.mediaType("link");
 					answerlist.add(answer1);
+					answerlist.add(answer2);
 					response.setAnswers(answerlist);
 				    return new ResponseEntity<FormSubmitResponse>(response, HttpStatus.OK);
 				 }else {
@@ -586,7 +591,7 @@ public class DibiApiController implements DibiApi {
 		}
 		case "Orario di chiusura":{
 			try {
-				String chiusura= "Il dipartimento di informatica chiude alle ore 8";
+				String chiusura= "Il dipartimento di informatica chiude alle ore 18";
                 final FormAnswer answer = new FormAnswer();
                 answer.setAnswerText(chiusura);
                 final List<FormAnswer> answerlist = new ArrayList<FormAnswer>();
@@ -600,7 +605,7 @@ public class DibiApiController implements DibiApi {
 				return new ResponseEntity<FormSubmitResponse>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
-		case "Orario generale":{
+		case "Orario settimanale":{
 			String baseUrl= "https://www.google.com/search?q=dipartimento+di+informatica+bari&biw=1536&bih=754&sxsrf=AOaemvKmvM3f_3Bu-vfqxvs5q_gAEgM1mw%3A1630344139473&ei=yxMtYZiUHNWDlQeojKXQBw&oq=dipartimento+di+informatica+bari&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBggAEBYQHjoHCCMQsAMQJzoHCAAQRxCwAzoLCC4QgAQQxwEQrwE6EAguEIAEEIcCEMcBEK8BEBRKBAhBGABQmyFY5ShgsitoAXACeACAAZkBiAHNBJIBAzAuNJgBAKABAcgBCcABAQ&sclient=gws-wiz&ved=0ahUKEwjYpa2aodnyAhXVQeUKHShGCXoQ4dUDCA8&uact=5";
 
 			try {
