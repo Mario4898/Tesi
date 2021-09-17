@@ -1422,7 +1422,7 @@ try {
 			}
 			
 			case "Informazioni Covid":{
-				String risposta="A tutti gli studenti viene richiesto di segnalare la propria presenza in Dipartimento registrandosi mediante scansione di un QR code. Dal 6 agosto è entrato in vigore il decreto-legge n.111 che richiede la verifica della certificazione verde agli studenti iscritti ai corsi di studio, anche post-laurea, che accedono alle aule per la frequenza delle lezioni e per gli esami di profitto o di laurea, ovvero che accedono ai laboratori didattici e di ricerca e alle sale lettura di pertinenza del Dipartimento. Essa dovrà avvenire a campione, nella misura ritenuta congrua dal verificatore.";
+				String risposta="A tutti gli studenti viene richiesto di segnalare la propria presenza in Dipartimento registrandosi mediante scansione di un QR code. Dal 6 agosto è entrato in vigore il decreto-legge n.111 che richiede la verifica della certificazione verde (Green Pass) agli studenti iscritti ai corsi di studio, anche post-laurea, che accedono alle aule per la frequenza delle lezioni e per gli esami di profitto o di laurea, ovvero che accedono ai laboratori didattici e di ricerca e alle sale lettura di pertinenza del Dipartimento. Essa dovrà avvenire a campione, nella misura ritenuta congrua dal verificatore.";
 			
 try {
 					
