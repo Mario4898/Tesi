@@ -351,7 +351,7 @@ public class DibiApiController implements DibiApi {
 					final FormAnswer answer1 = new FormAnswer();
 					final FormAnswer answer2 = new FormAnswer();
 					answer1.setAnswerText("Professore non trovato, riprovare.");
-					answer2.setAnswerText("Se la ricerca non produce risultati ti consiglio di visionare la sezione \"Docenti\" presente sul sito del Dipartimento.");
+					answer2.setAnswerText("Se la ricerca non produce risultati ti consiglio di visitare la sezione \"Docenti\" presente sul sito del Dipartimento.");
 					answer2.media("https://www.uniba.it/ricerca/dipartimenti/informatica/dipartimento/personale/docenti-2");
 					answer2.mediaType("link");
 					answerlist.add(answer1);
