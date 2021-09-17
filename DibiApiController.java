@@ -3,6 +3,7 @@ package io.swagger.api.dibi;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -1958,7 +1959,6 @@ try {
 			
 			
 		}
-		
 		if (!attività.isEmpty()) {
 			String baseUrl="https://classbook.di.uniba.it/";
 			
@@ -1995,6 +1995,20 @@ try {
 	                answerlist.add(answer2);
 	                response.setAnswers(answerlist);
 					return new ResponseEntity<FormSubmitResponse>(response, HttpStatus.OK);
+				} else if(attività.toLowerCase().equals("tutte")){
+					for (String prova : s) {
+		                final FormAnswer answer = new FormAnswer();
+		                
+		                answer.setAnswerText(prova);
+		                answerlist.add(answer);
+		                }
+					 final FormAnswer answer2 = new FormAnswer();
+					 answer2.setAnswerText("Per verificare quotidianamente le attività didattiche del Dib puoi visitare la sezione \"Occupazione aule/laboratori\" presente sul sito del Dipartimento");
+					 answer2.setMedia("https://classbook.di.uniba.it/");
+		             answer2.setMediaType("link");
+		             answerlist.add(answer2);
+					 response.setAnswers(answerlist);
+					 return new ResponseEntity<FormSubmitResponse>(response, HttpStatus.OK);
 				}else {
 				 for (String prova : s) {
 					 String[] newStr = prova.toLowerCase().split("\\s+");
@@ -2019,15 +2033,16 @@ try {
 					                }
 							 }
 					 }
-						 for (String risposta : a) {
+						 
+						 }
+					 
+				 }        
+				 for (String risposta : a) {
 							final FormAnswer answer = new FormAnswer();
 				            answer.setAnswerText(risposta);
 				            answerlist.add(answer);
 						 }
-						 }
-				 }        
-				 
-				 
+				
 				if (answerlist.size()==0) {
 					final FormAnswer answer1 = new FormAnswer();
 					answer1.setAnswerText("Non sono riuscita a trovare l'attività desiderata, per sicurezza ecco tutte le attività previste per oggi: ");
@@ -2060,6 +2075,9 @@ try {
 				 e.printStackTrace();
 			 }
 		}
+		
+
+		
 		
 		
 		
