@@ -979,7 +979,7 @@ public class DibiApiController implements DibiApi {
 						answerlist.add(answer);
 						for ( Element riga : doc.select("#content-core")) {
 							Elements corsi = riga.getElementsByTag("a");
-							System.out.println("CORSI ATTIVI:");
+							
 							for (Element corso : corsi) {
 								
 								String corsi_attivi = corso.text();
