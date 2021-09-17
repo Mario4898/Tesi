@@ -1019,7 +1019,7 @@ public class DibiApiController implements DibiApi {
 			}
 			
 			case "Cosa sono le Propedeuticità?":{
-				String risposta = "Le propedeuticità sono degli esami dei vari corsi di laurea che consentono di annullare il debito formativo, in caso di bocciatura al test di valutazione, e/o di accedere ad esami che li richiedono come competenze di base.";
+				String risposta = "Le propedeuticità sono degli esami dei vari corsi di laurea che consentono di annullare il debito formativo, in caso di bocciatura o mancata partecipazione al test di valutazione, e/o di accedere ad esami che li richiedono come competenze di base.";
 			
 				try {
 					final FormAnswer answer1 = new FormAnswer();
