@@ -2000,7 +2000,7 @@ try {
 	                answerlist.add(answer2);
 	                response.setAnswers(answerlist);
 					return new ResponseEntity<FormSubmitResponse>(response, HttpStatus.OK);
-				} else if(attività.toLowerCase().equals("tutte")){
+				} else if(attività.toLowerCase().equals("tutte") || attività.toLowerCase().equals("tutti")){
 					for (String prova : s) {
 		                final FormAnswer answer = new FormAnswer();
 		                
