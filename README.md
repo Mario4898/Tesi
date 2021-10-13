@@ -4,4 +4,4 @@ Una volta aver effettuato il run bisogna utilizzare ngrok. Ngrok è un reverse p
 Gli endpoint da utilizzare sono: dibi/submit e dibi/values (esclusivamente per il form dedicato ad i professori per permettere la compilazione automatica). 
 Inserire questi due endpoint subito dopo la fine dell'url generato con ngrok.
 # Esempio: 
-ngrok genera l'url http://6e50-193-204-189-14.ngrok.io, per collegare i conversational form al web service bisognerà scrivere http://6e50-193-204-189-14.ngrok.io/dibi/submit
+ngrok genera l'url "http://6e50-193-204-189-14.ngrok.io", per collegare i conversational form al web service bisognerà scrivere "http://6e50-193-204-189-14.ngrok.io/dibi/submit"
