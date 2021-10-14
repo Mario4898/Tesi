@@ -1,4 +1,5 @@
 # Tesi Ostuni Mario
+Il codice si trova: swagger-spring/src/main/java/io/swagger/api/dibi/DibiApiController.
 Per poter utilizzare il web service bisogna installare dal marketplace di eclipse lo "Spring Tools" e scaricare le librerie HTMLUnit e Jsoup.
 Una volta aver effettuato il run bisogna utilizzare ngrok. Ngrok è un reverse proxy server cross-platform con cui è possibile esporre un server locale, collocato dietro NAT, e firewall alla rete Internet tramite secure tunnel.
 Gli endpoint da utilizzare sono: dibi/submit e dibi/values (esclusivamente per il form dedicato ad i professori per permettere la compilazione automatica). 
